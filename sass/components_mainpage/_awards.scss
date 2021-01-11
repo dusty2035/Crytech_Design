@@ -1,0 +1,104 @@
+.awards {
+
+    &__box {
+        width: 90vw;
+        margin: 0 auto;
+
+        &-header {
+            text-align: center;
+        }
+
+        &-awards {
+
+            margin-top: 4rem;
+
+            &-img {
+                height: 11rem;
+                filter: saturate(0);
+                transition: all .3s;
+
+                @include respond (ul) {
+                    height: 22rem;
+                }
+                @include respond (phone-sm) {
+                    height: 6rem;
+                }
+
+                &:hover {
+                    filter: saturate(1);
+                    transform: scale(1.05) translatey(-1rem);
+                }
+                &-2 {
+                    height: 20rem;
+                    filter: saturate(0);
+                    transition: all .3s;
+                    @include respond (ul) {
+                        height: 40rem;
+                    }
+                    @include respond (tablet-p) {
+                        height: 20rem;
+                        width: 20rem;  
+                        align-self: center;
+                    }
+
+                    &:hover {
+                        filter: saturate(1);
+                        transform: scale(1.05) translatey(-1rem);
+                    }
+                }
+            }
+
+            &-top {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 5rem;
+
+                @include respond (tablet-p) {
+                    flex-direction: column;  
+                }
+
+                &-left{
+                    height: 100%;
+                    width: 45%;
+                    text-align: center;
+                    @include respond (tablet-p) {
+                        width: 100%;
+                    }
+                }
+
+                &-right {
+                    height: 100%;
+                    width: 45%;
+                    text-align: center;
+                    @include respond (tablet-p) {
+                        margin-top: 3rem;
+                        width: 100%;
+                    }
+                    @include respond (phone-sm) {
+                        margin-top: 6rem;
+                    }
+                }
+            }
+
+            &-bottom {
+                margin-top: 5rem;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                @include respond (ul) {
+                    margin-top: 10rem;
+                }
+                @include respond (tablet-p) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                @include respond (phone-sm) {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

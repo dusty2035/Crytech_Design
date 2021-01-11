@@ -1,0 +1,49 @@
+.pagination {
+    width: 10%;
+    height: 3rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & img{
+        height: 2rem;
+        
+    }
+
+    &-left{
+        @include pagination;
+    }
+
+    &-num {
+        background-color: $color-white;
+        padding: .2rem .8rem;
+        transition: all .2s;
+
+
+        & a{
+            color: $color-dark ;
+            text-decoration: none ;
+            font-size: 2.4rem ;
+
+        }
+
+        
+        &:hover{
+            background-color: $color-red;
+
+            & a {
+                color: $color-white;
+            }
+        }
+
+
+    }
+
+    &-right{
+        @include pagination;
+        & img {
+            transform: rotate(180deg);
+        }
+    }
+}

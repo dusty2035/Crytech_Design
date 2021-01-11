@@ -1,0 +1,265 @@
+.search-box{
+    margin-top: 10rem;
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50% , -50%);
+    background-color: $color-gray-superlight;
+    z-index: 10;
+
+    &-top {
+        box-shadow: 0 1rem 3rem rgba($color-dark,.7);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+
+        &-input {
+            font-size: 2.4rem;
+            border: none;
+            padding: 1.2rem 1.2rem;
+            width: 60%;
+            margin: 4rem 0 4rem;
+            transition: all .4s;
+            background-color: $color-white;
+            height: 5rem;
+            border-radius: 5rem 0 0 5rem;
+
+            &:focus {
+                outline: none;
+                width: 64%;
+                border: .1rem solid $color-green-light;
+            }
+        }
+
+        &-btn {
+            border: none;
+            background-color: $color-green-light;
+            height: 5rem;
+            width: 6rem;
+            border-radius: 0 5rem 5rem 0;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover{
+                background-color: rgba($color-green-light, .6);
+            }
+
+            &:hover &-img {
+                transform: scale(1.1);
+            }
+
+            &:focus {
+                outline: none;
+                
+            }
+
+            & img {
+                height:60%;
+                width: 60%;
+                
+            }
+        }
+    }
+
+    &-close_btn{
+        position: absolute;
+        right: 2.5rem;
+        top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rem;
+        height: 5rem;
+        width: 5rem;
+        background-color: $color-white;
+        cursor: pointer;
+        transition: all .4s;
+
+        @include respond(phone) {
+            right: 1.5rem;
+            top: 1rem;
+            height: 3rem;
+            width: 3rem;
+        }
+
+        &:hover {
+            background-color: $color-red-light;
+        }
+
+        & img {
+            height:50%;
+            width: 50%;
+        }   
+    }
+
+    &-bottom {
+        min-height: 40rem;
+        width: 100%;
+        background-color: $color-white;
+        margin: 1rem auto 0;
+        border-radius: 1rem;
+
+        & h3 {
+            text-align: center;
+            margin: 4rem 2rem;
+            padding-top: 2rem;
+            color: $color-gray-medium;
+        }
+    }
+}    
+
+
+.gamesearch {
+    margin: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(phone) {
+        margin: 1rem;
+    }
+   
+
+    &-boxcontent {
+        margin: 2rem 2rem 0;
+        height: 25rem;
+        width: 19rem;
+        border-radius: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        @include respond(phone){
+            height: 18rem;
+            width: 14rem;
+            border-radius: 1rem;
+            margin: 1rem 1rem 0;
+        }
+
+        & a {
+            color: $color-dark;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        &:hover &-img {
+            transform: scale(1.05);
+        }
+
+
+        &:hover &-name {
+            transform: translatey(-.5rem);
+        }
+
+        &-img {
+            border-radius: 2rem;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0rem 0rem 2rem $color-dark;
+            transition: all .3s;
+
+            @include respond(phone){
+                border-radius: 1rem;
+            }
+    
+        }
+
+        &-name {
+            position: absolute;
+            left: 18%;
+            bottom: 10%;
+            width: 66%;  
+            transition: all .3s;
+        }
+
+        & h3 {
+            margin-top: 2rem;
+        }
+
+
+    }
+}
+
+
+.other-search {
+    
+    &-content {
+        margin: 2rem auto;
+        width: 70%;
+        height: 18rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 2rem $color-gray-light;
+        transition: all .3s;
+        position: relative;
+
+        @include respond(phone){
+            width: 90%;
+        }
+
+
+        &:hover {
+            box-shadow: 0 0 6rem $color-gray-2;
+            transform: scale(1.05);
+        }
+
+        &-a {
+            color: $color-dark;
+            text-decoration: none;
+            display: flex;
+
+            &-imgbox {
+                width: 30%;
+                height: 18rem;
+
+                @include respond(phone){
+                    width: 100%;
+                }
+                
+
+                &-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 1rem 0 0 1rem;
+                    @include respond(phone){
+                        border-radius: 1rem;
+                    }
+                }
+            }
+
+            &-text {
+                padding: 3rem;
+                width: 70%;
+
+                @include respond(phone){
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    padding: 1.2rem;
+                }
+
+                &-title {
+                    font-size: 2.4rem;
+                }
+
+                &-excerpt {
+                    margin-top: 1rem;
+                    font-size: 1.8rem;
+                    color: $color-gray-medium;
+
+                    @include respond(phone) {
+                        margin-top: .3rem;
+                        padding: .3rem;
+                        background-color: rgba($color-white , .6);
+                        border-radius: .5rem;
+                        color: $color-dark;
+                        text-shadow: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

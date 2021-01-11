@@ -1,0 +1,134 @@
+.news_page {
+
+
+    &-top {
+        
+        height: 80rem;
+        overflow: hidden;
+        position: relative;
+        
+
+        @include respond (ul){
+            height: 170rem;
+        }
+        @include respond (tablet-p){
+            height: 60rem;
+        }
+        @include respond (tablet){
+            height: 100rem;
+        }
+        @include respond (phone){
+            height: 60rem;
+        }
+        
+        
+
+        &-background {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+            filter: blur(3rem);
+        }
+    
+        &-darkfilter {
+            position: absolute;
+            opacity: .5;
+            top: 0;
+            left: 0;
+            background-color: $color-dark;
+            height: 100%;
+            width: 100%;
+        }
+
+        &-box {
+            height: 50rem;
+            width: 80vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            display: flex;
+
+            @include respond (tablet) {
+                flex-direction: column;
+                top: 40%;
+                width: 85vw;
+            }
+
+            &-left {
+                width: 50%;
+                
+                @include respond (tablet){
+                    width: 100%;
+                }
+
+                & img {
+                    object-fit: cover;
+                    width: 100%;
+                    margin-top: 10rem;
+                    box-shadow: 0 0 15rem $color-dark;
+                    transition: all .4s;
+
+                    &:hover {
+                        transform:  scale(1.05) ;
+                        border-radius: 2rem;
+                        
+                    }
+                }
+            }
+
+            &-right {
+                margin-top: 3rem;
+                padding: 10rem 5rem;
+                width: 50%;
+
+                @include respond (tablet-p) {
+                    margin-top: 0rem;
+                    padding: 7rem 3rem;
+                }
+                @include respond (tablet) {
+                    width: 100%;
+                }
+                @include respond (phone) {
+                    padding: 5rem 2rem;
+                }
+                &-date {
+
+                    color: $color-gray-2;
+                    margin-bottom: 5rem;
+
+                }
+
+                &-title {
+
+                    color: $color-white;
+                    margin: 3rem 0;
+                }
+
+                &-trailer_link {
+                    margin: 4rem 0;
+
+                    & a {
+                        color: $color-white;
+                        text-decoration: none;
+                        
+
+                        &:hover {
+                            color: $color-yellow;
+                        }
+                    }
+
+                }
+                
+            }
+        }
+    }
+
+    &-bottom {
+        margin: 3rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: $color-white;
+    }
+}

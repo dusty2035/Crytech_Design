@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Magneto Bold';
+    src: url('./../../css/MAGNETOB.TTF') format('truetype');
+};
+
+h1 {
+    font-size: 5rem;
+
+    @include respond (ul) {
+        font-size: 10rem;
+    }
+    @include respond (tablet) {
+        font-size: 3.5rem;
+    }
+}
+
+
+
+h2 {
+    font-size: 4rem;
+
+    @include respond (ul) {
+        font-size: 8rem;
+    }
+    @include respond (tablet) {
+        font-size: 2.5rem;
+    }
+    @include respond (phone) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+
+    @include respond (ul) {
+        font-size: 4rem;
+    }
+    @include respond (tablet) {
+        font-size: 1.4rem;
+    }
+}
+
+h4 {
+    font-size: 1.6rem;
+
+    @include respond (ul) {
+        font-size: 2.3rem;
+    }
+    @include respond (tablet) {
+        font-size: 1rem;
+    }
+}
+
+h5 {
+    font-size: 1.4rem;
+
+    @include respond (ul) {
+        font-size: 2.4rem;
+    }
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}

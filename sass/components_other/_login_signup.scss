@@ -1,0 +1,189 @@
+.hero_video{
+    
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        object-position: center center;
+        opacity: .2;
+        
+        &-container-login {
+            height: 100vh;
+            width: 100%;
+
+        }
+}
+
+.form {
+
+    &_signup {
+
+        height: 0;
+       
+    }
+
+    &_login {
+
+        height: auto;
+    }
+}
+
+.login {
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+    &-box {
+
+        height: 47rem;
+        width: 48rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 2rem $color-dark;
+        background-color: rgba($color-gray-superlight,.1);
+        overflow: hidden;
+      
+        &-top {
+
+            height: 15%;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+
+            & h3 {
+                margin-top: 3rem;
+                text-align: center;
+            }
+
+            &-left {
+
+                height: 100%;
+                width: 50%;
+                background-color: rgba($color-gray-superlight,.9);
+                cursor: pointer;
+            }
+
+            &-right {
+                
+                height: 100%;
+                width: 50%;
+                background-color: transparent;
+
+            }
+
+            &-left_page {
+
+                height: 100%;
+                width: 50%;
+                background-color: transparent;
+            }
+
+            &-right_page {
+                
+                
+                height: 100%;
+                width: 50%;
+                background-color: rgba($color-gray-superlight,.9);
+                cursor: pointer;
+
+            }
+        }
+
+        &-bottom {
+
+            &-signup_page {
+                width: 80% ;
+                margin: 1.5rem auto 0;
+                overflow: hidden;
+            }
+
+            &-signup {
+
+                width: 0;
+                height: auto;
+                margin: 1.5rem auto 0;
+                overflow: hidden;
+
+                &-flex {
+
+                    display: flex;
+                    justify-content: space-between;
+                    margin: .5rem 1rem .5rem 0;
+
+                    &-chkbox {
+                        display: flex;
+                        width: 25rem;
+                        margin-top: 1rem;
+                        font-size: 1.6rem;
+                        align-items: center;
+
+                        & input {
+                            margin-right: 1rem;
+                        }
+
+                        & a {
+                            text-decoration: none;
+                            color: $color-blue-light;
+                        }
+                    }
+
+                    &-input {
+                        width: 100%;
+                        font-size: 2.4rem;
+                        border-radius: .7rem;
+                        margin-right: 1rem;
+                    } 
+
+                    &-submit {
+                        background-color: $color-blue-light;
+                        color: $color-white;
+                        border-radius: .4rem;
+                        float: right;
+                        padding: 1rem 1.5rem;
+                    }
+                }
+            }
+
+            &-login_page{
+                width: 0;
+                height: auto;
+                margin: 1.5rem auto 0;
+                overflow: hidden;
+            }
+
+            &-login {
+
+                width: 80% ;
+                margin: 1.5rem auto 0;
+                overflow: hidden;
+
+                &-flex {
+
+                    display: flex;
+                    justify-content: space-between;
+                    margin: .5rem 1rem .5rem 0;
+
+                    &-chkbox {
+                        display: flex;
+                        width: 25rem;
+                        margin-top: 1rem;
+                        font-size: 1.6rem;
+                        align-items: center;
+
+                        & input {
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    &-input {
+                        width: 100%;
+                        font-size: 2.4rem;
+                        border-radius: .7rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

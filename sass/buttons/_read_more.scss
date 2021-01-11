@@ -1,0 +1,32 @@
+.readmore {
+
+    
+    
+
+    & a {
+        color: $color-blue-light;
+        font-size: 2rem;
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(70deg , $color-blue-light, $color-blue-light 90% , $color-white 90%);
+        background-size: 0%;
+        padding: .4rem .6rem;
+        background-repeat: no-repeat;
+        transition: all .4s;
+
+        @include respond(ul) {
+            font-size: 4rem;
+            padding: .8rem 1.2rem;
+        }
+
+        &:hover {
+            background-size: 140%;
+            color: $color-white;
+        }
+        
+
+    }
+
+    
+}

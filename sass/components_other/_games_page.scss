@@ -1,0 +1,91 @@
+.hero-banner-games {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: .1;
+}
+
+.game {
+   
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 90vw;
+        margin: 19rem auto 0;
+
+        @include respond (tablet-p) {
+            width: 84vw;
+        }
+        @include respond (tablet) {
+            width: 85vw;
+        }
+
+    
+        &-content {
+            height: 35rem;
+            width: 26rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            margin-left: 2.5rem;
+            margin-top: 4rem;
+            box-shadow: 0 2rem 3rem $color-gray-light;
+            position: relative;
+            transition: all .3s;
+
+            @include respond (ul) {
+                border-radius: 2rem;
+                margin-left: 5rem;
+                margin-top: 5rem;
+                height: 70rem;
+                width: 52rem;
+            }
+            @include respond (tablet) {
+                margin-left: 1.5rem;
+                margin-top: 1.5rem;
+                height: 28rem;
+                width: 20rem;
+            }
+            @include respond (phone) {
+                border-radius: .5rem;
+                margin-left: .5rem;
+                margin-top: 1rem;
+                height: 16.5rem;
+                width: 12.5rem;
+            }
+
+            &-img {
+                height: 100%;
+                width: 100%;
+                transition: all.3s;
+            }
+
+
+            &-name {
+                position: absolute;
+                top: 60%;
+                left: 18%;
+                width: 66%;
+                transition: all.3s;
+
+                @include respond (phone) {
+                    height: 7rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 4rem 5rem $color-gray-light;
+                transform: scale(1.05);
+            }
+
+            &:hover &-name {
+                transform: scale(1.09) translateY(-.5rem);
+            
+            }
+            
+        }
+
+    }
+}

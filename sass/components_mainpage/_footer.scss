@@ -1,0 +1,134 @@
+.footer {
+
+    margin-top: 3rem;
+
+    &__box {
+        height: 42rem;
+        background-color: $color-gray-footer;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @include respond (ul) {
+            height: 80rem;
+        }
+        @include respond (tablet-p) {
+            padding-top: 2rem ;
+            
+        }
+        @include respond (phone) {
+            flex-direction: column;
+            height: 75rem;
+        }
+
+        &-left {
+
+            width: 40%;
+
+            @include respond (phone) {
+                width: 100%;
+            }
+
+            &-box {
+
+                height: 16rem;
+                width: 32rem;
+                margin-left: 10rem;
+                transform: scale(.8);
+                filter: saturate(0);
+                transition: all .3s ease-out;
+                
+                @include respond (ul) {
+                    height: 32rem;
+                    width: 64rem;
+                    margin-left: 20rem;
+                }
+                @include respond (tablet-p) {
+                    margin-left: 1rem;
+                }
+                @include respond (tablet) {
+                    margin-left: 2rem;
+                    height: 12rem;
+                    width: 21rem;
+                }
+                @include respond (phone) {
+                    margin-left: 0;
+                    height: 12rem;
+                    width: 21rem;
+                    margin: 0 auto;
+                }
+
+                &-img {
+                    width: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1);
+                    filter: saturate(1.9);
+                }
+            }
+        }
+
+        &-right {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            @include respond (tablet-p) {
+                width: 58%;
+            }
+            @include respond (phone) {
+                flex-direction: column;
+                width: 80%;
+            }
+
+            &-all{
+
+                @include respond (phone) {
+                    margin-top: 2rem;
+                }
+                
+                & h3 {
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    margin-bottom: 1.6rem;
+                }
+
+                & li {
+                    list-style: none;
+                    margin-top: 1.3rem;
+                    transition: all .3s;
+
+                    @include respond (ul) {
+                        margin-top: 2.6rem;
+                    }
+                    @include respond (tablet-p) {
+                        margin-top: 1rem;
+                    }
+
+                    &:hover {
+                        transform: translateX(1rem);
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        font-size: 2rem;
+                        color: $color-gray-light;
+
+                        @include respond (ul) {
+                            font-size: 4rem;
+                        }
+                        @include respond (tablet-p) {
+                            font-size: 1.5rem;
+                        }
+
+                        &:hover {
+                            color: $color-blue-light;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

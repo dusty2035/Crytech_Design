@@ -1,0 +1,63 @@
+@mixin picture-zoom {
+    transform: scale(1.04);
+    transition: all 5s;
+
+    &:hover {
+        transform: scale(1);
+        transition: all .5s;
+    }
+} ;
+
+@mixin pagination {
+    padding: .5rem;
+        background-color: $color-white;
+        transition: all .2s;
+
+        &:hover{
+            background-color: $color-red;
+        }
+}
+
+@mixin respond ($breakpoint) {
+    @if $breakpoint == phone-ssm {
+        @media (max-width :360px) {
+            @content
+        };
+    }
+    @if $breakpoint == phone-sm {
+        @media (max-width :460px) {
+            @content
+        };
+    }
+    @if $breakpoint == phone {
+        @media (max-width : 600px) {
+            @content
+        };
+    } 
+    @if $breakpoint == tablet {
+        @media (max-width : 768px) {
+            @content
+        };
+    }
+    @if $breakpoint == tablet-p {
+        @media (max-width : 1024px) {
+            @content
+        };
+    }
+    @if $breakpoint == sm {
+        @media (max-width : 1360px) {
+            @content
+        };
+    }
+    @if $breakpoint == md {
+        @media (max-width : 1920px) {
+            @content
+        };
+    }
+    @if $breakpoint == ul {
+        @media (min-width : 3000px) {
+            @content
+        };
+    }
+    
+}

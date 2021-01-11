@@ -1,0 +1,23 @@
+.copyright {
+    text-align: center;
+    height: 4rem;
+    background-color: $color-gray-2 ;
+
+    @include respond (ul) {
+        height: 8rem;
+    }
+
+    & p {
+        font-size: 2rem;
+        padding-top: 1rem;
+        color: $color-gray-light;
+
+        @include respond (ul) {
+            font-size: 4rem;
+            padding-top: 2rem;
+        }
+        @include respond (phone) {
+            font-size: 1.6rem;
+        }
+    }
+}

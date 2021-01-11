@@ -1,0 +1,120 @@
+.news_background {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    &_video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        opacity: .3;
+    }
+}
+
+.news_main {
+
+    min-height: 75rem;
+
+    @include respond (ul) {
+        min-height: 150rem;
+    }
+
+    @include respond (phone) {
+        min-height: 20rem;
+       
+    }
+
+    &-box {
+        width: 80vw;
+        margin: 25rem auto 0;
+
+        @include respond (ul) {
+            margin: 50rem auto 0;
+        }
+        @include respond (phone) {
+            margin: 12rem auto 0;
+        }
+
+        & a {
+
+            color: $color-white;
+        }
+
+        &-newsbox {
+
+            margin: 5rem auto;
+            height: 20rem;
+            width: 90%;
+            transform: skew(-12deg);
+            border-radius: 1rem;
+            box-shadow: 0 0 2rem $color-dark;
+            transition: all .5s;
+            overflow: hidden;
+            position: relative;
+
+            @include respond (ul) {
+                height: 30rem;
+            }
+            @include respond (tablet-p) {
+                height: 15rem;
+            }
+            @include respond (tablet) {
+                height: 12rem;
+            }
+            @include respond (phone) {
+                height: 10rem;
+                margin: 2rem auto;
+            }
+
+            &:hover {
+                transform: scale(1.01) skew(-12deg);
+                box-shadow: 0 3rem 4rem $color-dark;
+            }
+
+            &:hover &-background {
+                opacity: .95;
+            }
+
+            &-background {
+
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                opacity: .8;
+                transition: all .2s;
+
+            }
+
+            &-title {
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                width: 100%;
+                text-shadow: 0 0 0.5rem $color-dark;
+                text-align: center;
+
+                @include respond (ul) {
+
+                    text-shadow: 0 0 1rem $color-dark;
+
+                }
+            }
+
+            &-date {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                width: 100%;
+                text-shadow: 0 0 0.5rem $color-dark;
+                text-align: center;
+                box-shadow: 0 0 .2rem $color-dark;
+            }
+           
+        }
+    }
+}

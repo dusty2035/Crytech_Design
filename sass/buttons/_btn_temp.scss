@@ -1,0 +1,24 @@
+.btn_temp {
+    
+    background-color:$color-gray-superlight;
+    padding: 1.8rem 3.6rem;
+    border-radius: .3rem;
+    text-decoration: none;
+    color: $color-gray-light;
+    display: inline-block;
+    transition: all .3s ease-in;
+
+    @include respond (ul) {
+        padding: 2.4rem 6rem;
+        border-radius: .6rem;
+    }
+    @include respond (phone) {
+        padding: 1rem 2.5rem;
+        
+    }
+
+    &:hover {
+        background-color:$color-blue-light;
+        color: $color-white;
+    }
+}

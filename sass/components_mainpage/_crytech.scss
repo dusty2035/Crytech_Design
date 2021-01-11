@@ -1,0 +1,47 @@
+.crytech {
+    
+    
+
+    &__box {
+
+        width: 95rem ;
+        text-align: center;
+        margin: 4rem auto 10rem;
+        
+        
+        @include respond (ul) {
+            width: 250rem ;
+        }
+        @include respond (tablet-p) {
+            width: 55rem;
+        }
+        @include respond (phone) {
+            width: 50rem;
+        }
+        @include respond (phone-sm) {
+            width: 34rem;
+        }
+        @include respond (phone-ssm) {
+            width: 30rem;
+        }
+
+
+        &-p {
+            margin-top: 5rem;
+            color: $color-gray-light;
+            font-size: 24px;
+
+            @include respond (ul) {
+                font-size: 48px;
+            }
+            @include respond (tablet-p) {
+                font-size: 20px;
+            }
+            @include respond (phone-sm) {
+                font-size: 16px;
+            }
+            
+        }
+
+    }
+}

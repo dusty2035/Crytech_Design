@@ -1,0 +1,304 @@
+.game_info {
+
+    height: 85rem;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    
+
+    @include respond (ul){
+        height: 170rem;
+    }
+    @include respond (tablet-p){
+        height: 90rem;
+    }
+    @include respond (tablet){
+        height: 165rem;
+    }
+    @include respond (phone){
+        height: 140rem;
+    }
+    @include respond (phone-sm){
+        height: 120rem;
+    }
+
+    &-background {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        filter: blur(3rem);
+    }
+
+    &-darkfilter {
+        position: absolute;
+        opacity: .5;
+        top: 0;
+        left: 0;
+        background-color: $color-dark;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-box {
+        height: 80vh;
+        width: 132rem;
+        position: absolute;
+        top: 20rem;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+
+        @include respond (ul){
+            height: 160rem;
+            top: 40rem;
+            width: 290rem;
+        }
+        @include respond (tablet-p){
+            width: 82rem;
+        }
+        @include respond (tablet){
+            height: 130rem;
+            width: 64rem;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include respond (phone){
+            width: 53rem;
+            height: 110rem;
+        }
+        @include respond (phone-sm){
+            width: 35rem;
+            height: 90rem;
+        }
+        @include respond (phone-ssm){
+            width: 32rem;
+        }
+
+
+        &-content {
+            height: 100%;
+            width: 50%;
+            position: relative;
+
+            @include respond (tablet){
+                width: 100%;
+            }
+
+
+            &-box {
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 2rem;
+
+                @include respond (ul){
+                    padding: 4rem;
+                }
+                @include respond (tablet){
+                    left: 3rem;
+                }
+                @include respond (phone){
+                    left: 0;
+                }
+
+                &:hover &-img {
+                    transform: scale(1.05);
+                    box-shadow: 2rem 8rem 20rem $color-dark;
+                }
+
+                &:hover &-name {
+                    transform: scale(1.05) translateY(2rem);
+                }
+
+                &-img {
+                    
+                    border-radius: 2rem;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    box-shadow: 2rem 4rem 6rem $color-dark;
+                    transition: all .3s;
+
+                    @include respond (ul){
+                        height: 150%;
+                        width: 150%;
+                    }
+                }
+
+                &-name {
+
+                  position: absolute;
+                  left: 18%;
+                  bottom: 10%;
+                  width: 66%;  
+                  transition: all .3s;
+
+                  @include respond (ul){
+                    width: 110%;
+                }
+                  
+                }
+
+            }
+
+        }
+
+        &-description {
+
+            width: 50%;
+            padding: 2rem;
+
+            @include respond (ul){
+                padding: 4rem;
+            }
+            @include respond (tablet){
+                width: 100%;
+            }
+            @include respond (phone) {
+                padding: 0;
+            }
+            
+
+            &-box {
+                padding: 3rem;
+                height: 100%;
+                width: 100%;
+
+                &-top {
+                    display: flex;
+                    color: $color-gray-superlight;
+
+                    @include respond (tablet){
+                        line-height: 2rem;
+                    }
+
+                    & h5:not(:first-child) {
+
+                        margin-left: 1.2rem;
+
+                        @include respond (ul){
+                            margin-left: 2.4rem;
+                        }
+                        @include respond (tablet){
+                            margin-left: 0;
+                        }
+                    } 
+
+                    @include respond (tablet){
+                        flex-direction: column;
+                    }
+
+                    & a {
+                        color: $color-white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $color-yellow;
+                        }
+                    }
+                    
+                }
+
+                &-title {
+                    margin: 4rem 0;
+                    font-size: 7rem;
+
+                    @include respond (ul){
+                        margin: 8rem 0;
+                        font-size: 14rem;
+                    }
+                    @include respond (tablet){
+                        font-size: 6rem;
+                    }
+                    @include respond (phone){
+                        font-size: 4rem;
+                    }
+
+                    &-set {
+                        color: $color-white;
+                    }
+                }
+
+                &-info {
+
+                    
+                    & p {
+                        line-height: 150%;
+                        color: $color-gray-light;
+                        font-size: 1.8rem;
+
+                        @include respond (ul){
+                            font-size: 3.6rem;
+                        }
+                        @include respond (phone){
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+
+                &-bottom {
+                    display: flex;
+                    margin-top: 6rem;
+                    color: $color-white;
+                    position: relative;
+                    
+                    @include respond (tablet){
+                        flex-direction: column;
+                    }
+                    
+
+                    & a {
+                        color: $color-white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $color-yellow;
+                            transform: scale(1.02);
+                        }
+
+                        @include respond (tablet){
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    & h3 {
+                        
+                        &:not(:first-child){
+                            margin-left: 6rem;
+
+                            @include respond (tablet-p){
+                                margin-left: 5rem;
+                            }
+                            @include respond (tablet){
+                                margin-left: 0;
+                                margin-top: .5rem;
+                            }
+                        }   
+                    }
+
+                    &-platform {
+                        position: absolute;
+                        top: 6rem;
+                        left: 80%;
+                        font-size: 2rem;
+
+                        @include respond (tablet){
+                            left: 30%;
+                        }
+                        @include respond (ul){
+                            top: 12rem;
+                            font-size: 4rem;
+                        }
+
+                        & a:hover {
+                            color: $color-blue-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

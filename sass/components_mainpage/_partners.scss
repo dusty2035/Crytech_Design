@@ -1,0 +1,79 @@
+.partners {
+
+    margin-top: 10rem;
+
+    &__box {
+
+        width: 90%;
+        margin: 0 auto;
+
+        &-header {
+            text-align: center;
+        }
+
+        &-partners{
+
+            margin-top: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+            &-box {
+
+                margin-top: 5rem;
+                margin-right: 5rem;
+                text-align: center;
+                height: 12rem;
+                width: 20rem;
+
+                @include respond (ul) {
+                    margin-top: 10rem;
+                    margin-right: 10rem;
+                    height: 24rem;
+                    width: 40rem;
+                }
+                @include respond (tablet-p){
+                    margin-right: 0;
+                }
+                
+
+
+                &-img {
+                    height: 8rem;
+                    filter: saturate(0);
+                    transition: all 0.4s;
+
+                    @include respond (ul) {
+                        height: 16rem;
+                    }
+
+                    &:hover {
+                        filter: saturate(1);
+
+                        & + p {
+                            transform: translateY(0);
+                            opacity: 1;
+
+                        }
+                    }
+                }
+
+
+                & p {
+                    margin-top: 1rem;
+                    color: $color-gray-medium;
+                    transform: translateY(3rem);
+                    opacity: 0;
+                    transition: all 0.5s;
+                    font-size: 1.5rem;
+
+                    @include respond (ul) {
+                        height: 16rem;
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

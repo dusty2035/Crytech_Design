@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header" id="header">
+            <div class="header__logo">
+                <div class="header__logo-box">
+                    <img src="img/logoes/crytech-logo.1.png" alt="" class="header__logo-box-img" id="logo" >
+                </div>
+            <a href="#">
+                <div class="header__logo-textbox" id="logo_text">
+                    <img src="img/logoes/crytech-text.png" alt="" class="header__logo-textbox-text">
+                </div>
+            </div></a>
+            <div class="header__nav" id="nav">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">CRYENGINE</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">Basket</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Search</a></li>
+
+            </div>
+            <div class="header__icon" id="icon">
+                <a href="#"><div class="header__icon-basket">
+                    <div class="header__icon-basket-name">
+                        <span>Basket</span>
+                    </div>
+                    <div class="header__icon-basket-logo">
+                        <img src="img/icons/SVG/basket.svg" alt="">
+                        <div class="header__icon-basket-count">
+                            <div class="header__icon-basket-count-num">
+                                <h5>0</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div></a>
+                <a href="#"><div class="header__icon-account">
+                   <div class="header__icon-account-name">
+                       <span>Account</span>
+                   </div>
+
+                   <div class="header__icon-account-logo">
+                       <img class="header__icon-account-logo-position" src="img/icons/SVG/profile_icon.svg" alt="">
+                   </div>
+                </div></a>
+                
+                <a href="#"><div class="header__icon-account">
+                    <div class="header__icon-account-name">
+                        <span>Search</span>
+                    </div>
+                    <div class="header__icon-account-logo">
+                        <img class="header__icon-account-position" src="img/icons/SVG/search_icon.svg" alt="">
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="hero_video-container-login">
+            <video class="hero_video" autoplay loop muted>
+                <source src="video/background-video.mp4"> 
+            </video>
+        </div>
+
+        <div class="login">
+            <div class="login-box">
+                <div class="login-box-top">
+                    <div class="login-box-top-left" id="signup">
+                        <h3>Sign up</h3>
+                    </div>
+                    <div class="login-box-top-right" id="login">
+                        <h3>Login</h3>
+                    </div>
+                </div>
+                <div class="login-box-bottom">
+                    <form class="form_signup" action="post" id="signup_form">
+                        <div class="login-box-bottom-signup" id="signup_box">
+                            <div class="login-box-bottom-signup-flex"><h3>Nickname</h3><h3>Error</h3></div>
+                            <input class="login-box-bottom-signup-flex-input" type="text">
+                            <div class="login-box-bottom-signup-flex"><h3>Email</h3><h3>Error</h3></div>
+                            <input class="login-box-bottom-signup-flex-input" type="email">
+                            <div class="login-box-bottom-signup-flex"><h3>Password</h3><h3>Error</h3></div>
+                            <input class="login-box-bottom-signup-flex-input" type="password">
+                            <div class="login-box-bottom-signup-flex"><h3>Repeat Password</h3><h3>Error</h3></div><input class="login-box-bottom-signup-flex-input" type="password">
+                            <div class="login-box-bottom-signup-flex-chkbox">
+                                <input name="signup_checkbox" id="signup_checkbox" class="login-box-bottom-signup-flex-chkbox-input" type="checkbox">
+                                <label for="signup_checkbox"> I agree the <a href="#">Terms of service</a></label>
+                            </div>
+                            <input class="login-box-bottom-signup-flex-submit" type="submit" id="submit">
+                        </div>
+                    </form>
+                   <form class="form_login" action="post"  id="login_form">
+                    <div class="login-box-bottom-login" id="login_box">
+                        <div class="login-box-bottom-login-flex"><h3>Nickname</h3><h3>Error</h3></div>
+                        <input class="login-box-bottom-login-flex-input" type="text">
+                       
+                        <div class="login-box-bottom-login-flex"><h3>Password</h3><h3>Error</h3></div>
+                        <input class="login-box-bottom-login-flex-input" type="password">
+                        <div class="login-box-bottom-login-flex-chkbox">
+                            <input name="login_checkbox" id="login_checkbox" class="login-box-bottom-login-flex-chkbox-input" type="checkbox">
+                            <label for="login_checkbox"> Remember me</label>
+                        </div>
+                        <input class="login-box-bottom-signup-flex-submit" type="submit" id="submit">
+                    </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__box">
+                <div class="footer__box-left">
+                    <a href="#">
+                        <div class="footer__box-left-box">
+                            <img src="img/logoes/crytech-logo-footer.png" alt="" class="footer__box-left-box-img">
+                        </div>
+                    </a>
+                </div>
+                <div class="footer__box-right">
+                    <div class="footer__box-right-all">
+                        <div>
+                            <h3>COMPANY</h3>
+                        </div>
+                        <hr>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">CRYENGINE</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </div>
+                    <div class="footer__box-right-all">
+                        <div>
+                            <h3>GAMES</h3>
+                        </div>
+                        <hr>
+                        <li><a href="#">Hunt:Showdown</a></li>
+                        <li><a href="#">The climb</a></li>
+                        <li><a href="#">Robinson:the journey</a></li>
+                        <li><a href="#">RYSE:Son of Rome</a></li>
+                        <li><a href="#">Crysis 3</a></li>
+                        <li><a href="#">All Our Games</a></li>
+                    </div>
+                    <div class="footer__box-right-all">
+                        <div>
+                            <h3>SUPPORT</h3>
+                        </div>
+                        <hr>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2020 Fake-Crytech All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="node_modules/swiper/swiper-bundle.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

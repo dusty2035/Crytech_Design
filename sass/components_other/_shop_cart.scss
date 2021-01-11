@@ -1,0 +1,371 @@
+.cart {
+
+    min-height: 50rem;
+    position: relative;
+    width: 85vw;
+    margin: 0 auto;
+
+    @include respond (ul) {
+        min-height: 100rem;
+    }
+    
+    &-box {
+       
+        &-empty {
+            display: none;
+            margin: 20rem auto 0;
+            width: 90vw;
+            color: $color-red-light;
+            text-align: center;
+
+            @include respond (ul) {
+                margin: 40rem auto 0;
+            }
+
+            & img {
+                margin-top: 5rem;
+                width: 20rem;
+
+                @include respond (ul) {
+                    margin-top: 10rem;
+                    width: 40rem;
+                }
+                @include respond (phone) {
+                    width: 15rem;
+                }
+            }
+        }
+
+        &-full {
+            
+            margin: 20rem auto 0;
+            background-color: $color-white;
+            box-shadow: 0 0 2rem $color-gray-light;
+            border-radius: 2rem;
+            display: flex;
+
+            @include respond (ul) {
+                margin: 40rem auto 0;
+                box-shadow: 0 0 4rem $color-gray-light;
+                border-radius: 4rem;
+            }
+            @include respond (tablet-p) {
+                flex-direction: column;
+                margin: 10rem auto 0;
+            }
+
+            &-left {
+
+                width: 60%;
+                height: 100%;
+                padding: 2rem;
+
+                @include respond (ul) {
+                    padding: 4rem;
+                }
+                
+                @include respond (tablet-p) {
+                    width: 100%;
+                }
+
+                &-box {
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include respond (phone) {
+                        flex-direction: column;
+                    }
+
+                    &-left {
+
+                        display: flex;
+
+                        &-img {
+
+                            width: 14.2rem;
+                            margin: 2rem 1rem;
+                            border-radius: .4rem;
+                            box-shadow: 0 0 4rem $color-gray-light;
+
+                            @include respond (ul) {
+                                width: 28.4rem;
+                                margin: 4rem 2rem;
+                                border-radius: .8rem;
+                                box-shadow: 0 0 8rem $color-gray-light;
+                            }
+                        }
+
+                        &-description {
+
+                            margin: 6rem 0 ;
+
+                            @include respond (ul) {
+                                margin: 12rem 0 ;
+                            }
+                            
+                            & a {
+
+                                text-decoration: none;
+                                color: $color-blue-light;
+                            }
+                            & h3 {
+
+                                margin-left: 2rem;
+
+                                &:not(:first-child) {
+                                    margin-top: 4rem;
+                                }
+
+                                @include respond (ul) {
+
+                                    margin-left: 4rem;
+
+                                &:not(:first-child) {
+                                    margin-top: 8rem;
+                                }
+                                }
+                            }
+                        }
+                    }
+
+                    &-right {
+                        height: 10rem;
+                        width: 25rem;
+                        
+                        @include respond (ul) {
+                            height: 20rem;
+                            width: 50rem;
+                        }
+
+                        &-box {
+                            margin-top: 2rem;
+                            display: flex;
+                            align-items: center;
+
+                            @include respond (ul) {
+                                margin-top: 4rem;
+                            }
+
+                            &-numbox {
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                margin-left: 5rem;
+                                height: 4.1rem;
+                                width: 8rem;
+                                border: .2rem solid $color-gray-light;
+                                border-radius: .9rem;
+
+                                @include respond (ul) {
+
+                                    margin-left: 10rem;
+                                    height: 8.2rem;
+                                    width: 16rem;
+                                    border: .4rem solid $color-gray-light;
+                                    border-radius: 1.8rem;
+                                }
+                               
+                                &-minus {
+                                    padding-bottom: .4rem;
+                                    padding-left: .4rem;
+                                    cursor: pointer;
+
+                                    @include respond (ul){
+                                        padding-bottom: .8rem;
+                                        padding-left: .8rem;
+                                    }
+                                    
+                                }
+                
+                                &-plus {
+                                    cursor: pointer;
+                                    padding-right: .4rem;
+
+                                    @include respond (ul) {
+                                        
+                                        padding-right: .8rem;
+                                    }
+                                }
+                
+                                &-num {
+                                    overflow: hidden;
+                                    padding-top: .8rem;
+                                    text-align: center;
+                                    width: 3rem;
+                                    height: 4rem;
+                                    border-left: .2rem solid $color-gray-light;
+                                    border-right: .2rem solid $color-gray-light;
+
+                                    @include respond (ul) {
+                                        padding-top: 1.6rem;
+                                        width: 6rem;
+                                        height: 8rem;
+                                        border-left: .4rem solid $color-gray-light;
+                                        border-right: .4rem solid $color-gray-light;
+                                    }
+                                    @include respond (tablet) {
+                                        padding-top: 1.4rem;
+                                    }
+                                }
+
+                            }
+
+                            &-price {
+
+                                margin: 0 1rem;
+
+                                @include respond (ul) {
+
+                                    margin: 0 2rem;
+                                }
+                                @include respond (phone) {
+
+                                    margin: .1rem 1rem 0;
+                                }
+                            }
+
+                            &-trashcan {
+
+                                &-icon {
+
+                                    width: 2rem;
+                                    cursor: pointer;
+
+                                    @include respond (ul) {
+
+                                        width: 4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                padding: 2rem;
+                width: 40%;
+                height: 100%;
+                
+                @include respond (ul) {
+                    padding: 4rem;
+                }
+                @include respond (tablet-p) {
+                    width: 100%;
+                }
+
+                &-items {
+
+                    margin: 1.2rem 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include respond (ul) {
+                        margin: 2.4rem 0 ;
+                    }
+                    &-num {
+                        color: $color-gray-medium;
+                    }
+                }
+
+                &-promobox {
+
+                    margin-bottom: 1.2rem;
+
+                    @include respond (ul) {
+
+                        margin-bottom: 2.4rem;
+                    }
+                    
+                    &-box {
+
+                        display: flex;
+                        align-items: center;
+                        margin-top: 1.2rem;
+
+                        @include respond (ul) {
+                            
+                            margin-top: 2.4rem; 
+                        }
+
+                        @include respond (phone) {
+                            flex-direction: column;
+                        }
+
+                        & input  {
+                            height: 3.6rem;
+                            width: auto;
+                            border-radius: .8rem;
+                            font-size: 1.8rem;
+                            padding: .4rem;
+                            border: .2rem solid $color-gray-light;
+
+                            @include respond (ul) {
+                                height: 7.2rem;
+                                width: auto;
+                                border-radius: 1.6rem;
+                                font-size: 3.6rem;
+                                padding: .8rem;
+                                border: .4rem solid $color-gray-light;
+                            }
+                        }
+
+                        &-btn {
+                            cursor: pointer;
+                            margin-left: 3rem;
+                            padding: .9rem 3rem;
+                            background-color: $color-blue-light;
+                            color: $color-white;
+                            border-radius: .6rem;
+
+                            @include respond (ul) {
+                                margin-left: 6rem;
+                                padding: 1.8rem 6rem;
+                                border-radius: 1.2rem;
+                            }
+                            @include respond (phone) {
+                                margin-left: 0;
+                                margin-top: 2rem;
+                            }
+                        }
+
+                    }
+
+                    &-suc {
+
+                        margin-top: 1.2rem;
+                        color: $color-green;
+
+                        @include respond (ul) {
+
+                            margin-top: 2.4rem;
+                        }
+                    }
+                }
+
+                &-proceedbtn {
+                    height: 3.7rem;
+                    width: 20.1rem;
+                    background-color: $color-blue-light;
+                    border-radius: .7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $color-white;
+                    margin: 2rem auto;
+                    cursor: pointer;
+
+                    @include respond (ul) {
+
+                        height: 7.4rem;
+                        width: 40.2rem;
+                        border-radius: 1.4rem;
+                        margin: 4rem auto;
+                    }
+                }
+            }
+        }
+        
+    }
+}

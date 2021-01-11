@@ -1,0 +1,125 @@
+.shop {
+   
+    &-box {
+        display: flex;
+        
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 130rem;
+        margin: 19rem auto 0;
+        
+        @include respond (ul) {
+            width: 320rem;
+        }
+        @include respond (tablet-p) {
+            margin: 6rem auto 0;
+            width: 95vw;
+        }
+        @include respond (tablet) {
+            margin: 2rem auto 0;
+        }
+        @include respond (phone) {
+            margin: 1rem auto 0;
+        }
+    
+        &-content {
+            
+            width: 30rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            box-shadow: 0 1.5rem 4rem $color-gray-light;
+            transition: all.3s;
+            position: relative;
+            background-color: $color-white;
+
+            @include respond (ul) {
+                border-radius: 2rem;
+                margin-left: 4rem;
+                margin-top: 4rem;
+                width: 60rem;
+            }
+            @include respond (tablet) {
+                margin-left: 1rem;
+                margin-top: 1rem;
+                width: 21rem;
+            }
+            @include respond (phone) {
+                border-radius: .5rem;
+                margin-left: .5rem;
+                margin-top: .5rem;
+                width: 14rem;
+            }
+
+
+            &-img {
+                height: 90%;
+                width: 100%;
+
+                
+            }
+
+
+            &-name {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%);
+                height: 14rem;
+                
+
+                @include respond (ul) {
+                    height: 28rem;
+                }
+                @include respond (phone) {
+                    height: 7rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 4rem 5rem $color-gray-light;
+                transform: scale(1.05);
+            }
+
+            & a {
+                text-decoration: none;
+            }
+
+            &-box {
+                padding-top: .3rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                display: flex;
+                justify-content: space-between;
+                
+                @include respond (ul) {
+                    padding-top: 1.5rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+                @include respond (phone) {
+                    padding-top: .08rem;
+                    padding-left: .2rem;
+                    padding-right: .2rem;
+                }
+
+                & h3 {
+
+                    @include respond (phone) {
+                        font-size: 1rem;
+                    }
+                }
+
+                &-gamesname {
+                    color: $color-dark;
+
+                }
+
+                &-price {
+                    color: $color-gray-medium;
+                }
+            }  
+        }
+    }
+}

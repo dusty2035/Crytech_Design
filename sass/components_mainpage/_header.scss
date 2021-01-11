@@ -1,0 +1,300 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 12rem;
+    align-items: center;
+    z-index: 2000;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all .5s;
+    border-radius: 0 0 4rem 4rem ;
+    box-shadow: 0 0 0rem $color-dark;
+
+
+    @include respond (ul) {
+        height: 24rem;
+    }
+    @include respond (tablet-p) {
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        overflow: scroll;
+    }
+
+    
+    &__logo {
+
+        
+        display: flex;
+
+        &-box {
+           
+            
+            &-img {
+                height: 7rem;
+                cursor: pointer;
+
+                @include respond (ul) {
+                    height: 14rem;
+                }
+                @include respond (tablet-p) {
+                    height: 6rem;
+                }
+                @include respond (tablet) {
+                    height: 5rem;
+                }
+            }
+        }
+
+        &-textbox {
+            width: 16rem;
+            overflow: hidden;
+            transition: width 1s;
+
+            @include respond (ul) {
+                width: 32rem;
+            }
+
+            @include respond (tablet-p) {
+                display: none;
+            }
+
+            &-text {
+                height: 7rem;
+
+                @include respond (ul) {
+                    height: 14rem;
+                }
+            }
+        }
+
+    }
+
+    &__nav {
+        display: flex;
+        list-style: none;
+        justify-content: left;
+        align-items: center;
+        height: 80%;
+        
+
+        @include respond (tablet-p) {
+            margin-top: 1rem;
+            display: none;
+            text-align: center;
+        }
+
+        & li {
+
+            @include respond (tablet-p) {
+
+                height: 100%;
+                width: 100%;
+            }
+            
+
+            & a {
+                text-decoration: none;
+                font-size: 2rem;
+                color: $color-dark;
+                height: 100%;
+                width: 100%;
+
+                
+                @include respond (ul) {
+                   font-size: 4rem;
+                }
+                @include respond (tablet) {
+                    font-size: 2rem;
+                }
+                @include respond(phone) {
+                    font-size: 2rem;
+                }
+                @include respond(phone-sm) {
+                    font-size: 2.2rem;
+                }
+    
+                &:hover {
+                    color: $color-blue-light;
+                }
+            }
+        }
+
+        & li:last-child , li:nth-child(7) , li:nth-child(6)  {
+            display: none;
+
+            @include respond (tablet-p) {
+                display: block;
+            }
+        }
+
+        & li:not(:first-child) {
+            padding-left: 5rem;
+
+            
+            @include respond (ul) {
+                padding-left: 15rem;
+            }
+            @include respond(tablet) {
+                padding-left: 0;
+                padding-top: 3rem;
+            }
+            @include respond(tablet-p) {
+                padding-left: 0;
+                padding-top: 1.5rem;
+            }
+            @include respond(phone) {
+                padding-top: 1rem;
+            }
+            
+            
+        }
+
+    }
+
+    &__icon {
+
+        display: flex;
+        align-items: center;
+
+
+        @include respond (tablet-p) {
+            display: none;  
+        }
+        
+
+        & a {
+            text-decoration: none;
+            color: $color-dark;
+            font-size: 2rem;
+
+            @include respond(ul) {
+                font-size: 4rem;
+            }
+            @include respond(tablet-p) {
+                padding-top: 1.5rem;
+            }
+            @include respond(tablet) {
+                padding-top: 3rem;
+                font-size: 4rem;
+            }
+            @include respond(phone) {
+                padding-top: 1rem;
+                font-size: 3rem;
+            }
+            
+            
+        }
+
+        & a:hover {
+            color: $color-blue-light;
+        }
+
+        &-basket {
+
+
+            display: flex;
+            
+            &-logo {
+                position: relative;
+                height: 1.8rem;
+                width: 2.6rem;
+                margin-left: .4rem;
+
+                @include respond(ul) {
+                    height: 3.6rem;
+                    width: 5.2rem;
+                    margin-left: .8rem;
+                }
+                @include respond(tablet-p) {
+                    display: none;
+                }
+                
+            }
+
+            &-count {
+                position: absolute;
+                top: -1.8rem;
+                left: .5rem;
+                height: 2rem;
+                width: 2rem;
+
+                @include respond(ul) {
+                    top: -4rem;
+                    left: 1rem;
+                    height: 4rem;
+                    width: 4rem;
+                }
+                @include respond(tablet-p) {
+                   display: none;
+                }
+
+                &-num {
+                    color: $color-white;
+                    position: absolute;
+                    top: 0rem;
+                    left: .4rem;
+                    background-color: $color-gray-medium;
+                    padding: .2rem;
+                    border-radius: .4rem;
+                }
+            }
+        }
+
+
+        &-account {
+
+            display: flex;
+            margin-left: 4rem;
+            cursor: pointer;
+
+            @include respond(ul) {
+
+                margin-left: 8rem;
+            }
+            @include respond (tablet-p) {
+
+                margin-left: 0;
+            }
+
+
+            &-name {
+                color: $color-dark;
+                font-size: 2rem;
+
+                &:hover {
+                    color: $color-blue-light;
+                }
+                
+            }
+
+            &-logo {
+                height: 1.8rem;
+                width: 2.5rem;
+                align-self: flex-start;
+                margin-left: .5rem;
+                position: relative;
+
+                @include respond(ul) {
+                    height: 3.6rem;
+                    width: 5rem;
+                }
+                @include respond (tablet-p) {
+                    display: none;
+                }
+
+                &-position {
+                    position: absolute;
+                    top: -.7rem;
+                    @include respond(ul) {
+                        top: -1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+

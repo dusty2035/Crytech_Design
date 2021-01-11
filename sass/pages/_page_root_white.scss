@@ -1,0 +1,30 @@
+.page {
+    
+    &__information-white {
+
+        position: absolute;
+        top: 14rem;
+        left: 12rem;
+        display: flex;
+        
+
+        & a {
+            text-decoration: none;
+            color: $color-white;
+
+            &:hover {
+                color: $color-blue-light;
+            }
+        }
+
+        @include respond (ul) {
+            top: 28rem;
+            left: 24rem;
+        }
+        @include respond (tablet) {
+            display: none;
+        }
+    }
+
+
+}
